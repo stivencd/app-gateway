@@ -86,8 +86,8 @@ static_resources:
         - endpoint:
             address:
               socket_address:
-                address: host.docker.internal
-                port_value: 5001
+                address: app-service-security #host.docker.internal
+                port_value: 80 #5001
   - name: account_cluster
     connect_timeout: 60s
     type: LOGICAL_DNS
@@ -101,8 +101,8 @@ static_resources:
         - endpoint:
             address:
               socket_address:
-                address: host.docker.internal
-                port_value: 5002
+                address: app-service-account #host.docker.internal
+                port_value: 80 #5002
   - name: deposit_cluster
     connect_timeout: 60s
     type: LOGICAL_DNS
@@ -116,8 +116,8 @@ static_resources:
         - endpoint:
             address:
               socket_address:
-                address: host.docker.internal   #localhost  
-                port_value: 5003
+                address: app-service-deposit  #host.docker.internal   #localhost  
+                port_value: 80  #5003
   - name: withdrawal_cluster
     connect_timeout: 60s
     type: LOGICAL_DNS
@@ -131,8 +131,8 @@ static_resources:
         - endpoint:
             address:
               socket_address:
-                address: host.docker.internal   #localhost  
-                port_value: 5004
+                address: app-service-withdrawal  #host.docker.internal   #localhost  
+                port_value: 80 #5004
   - name: movement_cluster
     connect_timeout: 60s
     type: LOGICAL_DNS
@@ -146,8 +146,8 @@ static_resources:
         - endpoint:
             address:
               socket_address:
-                address: host.docker.internal   #localhost  
-                port_value: 5005
+                address: app-service-movement  #host.docker.internal   #localhost  
+                port_value: 80  #5005
   - name: zipkin
     connect_timeout: 1s
     type: STRICT_DNS
